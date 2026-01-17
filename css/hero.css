@@ -1,0 +1,253 @@
+:root {
+    --squid-red: #ff0000;
+    --squid-blue: #00d2ff;
+    --deep-black: #050505;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--deep-black);
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+    color: white;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.55);
+    /* Side glowing borders */
+    border-left: 5px solid var(--squid-red);
+    border-right: 5px solid var(--squid-blue);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../image/bg/image.png') center/cover no-repeat;
+    filter: blur(3.5px);
+    transform: scale(1.05);
+    opacity: 0.75;
+    z-index: 0;
+}
+
+
+/* Headings */
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 90%;
+}
+
+.main-heading {
+    font-size: 5.5rem;
+    color: white;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px var(--squid-red);
+    animation: flicker 2.5s infinite;
+}
+
+.main-heading span {
+    color: var(--squid-red);
+}
+
+.tagline {
+    color: #888;
+    font-size: 1.3rem;
+    margin: 10px 0 30px 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Countdown Container (Centered) */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    width: 100%;
+}
+
+.time-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    padding: 25px 15px;
+    min-width: 120px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.05);
+    transition: 0.4s ease-in-out;
+}
+
+.time-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--squid-red);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.time-box span {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 3.8rem;
+    color: var(--squid-red);
+    display: block;
+    line-height: 1;
+    text-shadow: 0 0 15px var(--squid-red);
+}
+
+.time-box p {
+    font-size: 0.75rem;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* Registration Button */
+.register-btn {
+    margin-top: 20px;
+    padding: 18px 50px;
+    font-size: 1.3rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: white;
+    border: 2px solid var(--squid-red);
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px var(--squid-red);
+    text-transform: uppercase;
+}
+
+.register-btn:hover {
+    background: var(--squid-red);
+    color: black;
+    box-shadow: 0 0 40px var(--squid-red);
+    transform: scale(1.05);
+}
+
+/* Venue Bar (Glass Style) */
+.venue-info {
+    margin-top: 50px;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+    color: #eee;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.separator {
+    margin: 0 15px;
+    color: var(--squid-red);
+    font-weight: bold;
+}
+
+/* Running Marquee */
+.marquee {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--squid-red);
+    color: white;
+    padding: 8px 0;
+    overflow: hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 -5px 20px rgba(255, 0, 0, 0.3);
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+}
+
+/* Animations */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: 0 0 20px var(--squid-red), 0 0 40px rgba(255, 0, 0, 0.4);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: 0 0 2px var(--squid-red);
+        color: #9b9898;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.8rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+
+    .countdown-container {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        min-width: 80px;
+        padding: 15px 10px;
+    }
+
+    .time-box span {
+        font-size: 2.2rem;
+    }
+
+    .venue-info {
+        font-size: 0.7rem;
+        padding: 10px 15px;
+    }
+
+    .hero {
+        border-width: 3px;
+    }
+}
+
