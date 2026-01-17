@@ -3,18 +3,8 @@
  * Target: February 10, 2026
  */
 
-// Compute the next Feb 10, 6 PM automatically (advances to next year if already passed)
-const getNextEventTime = () => {
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    let target = new Date(currentYear, 1, 10, 18, 0, 0, 0); // Month is 0-indexed (1 = Feb)
-    if (target.getTime() <= now.getTime()) {
-        target = new Date(currentYear + 1, 1, 10, 18, 0, 0, 0);
-    }
-    return target.getTime();
-};
-
-const countDownDate = getNextEventTime();
+// Fixed target: Feb 10, 2026 6:00 PM (shows 00s if passed)
+const countDownDate = new Date("Feb 10, 2026 18:00:00").getTime();
 
 // Update the count down every 1 second
 const x = setInterval(function() {
@@ -40,10 +30,10 @@ const x = setInterval(function() {
     document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
 
     // If the count down is over, display a message
-    if (distance < 0) {
+    if (distance <= 0) {
         clearInterval(x);
         document.querySelector(".countdown-container").innerHTML = "<span class='game-over'>GAME STARTED</span>";
-        
+
         // Optional: Change the button text to "JOIN NOW" when timer ends
         document.querySelector(".register-btn").innerText = "JOIN NOW";
     }
