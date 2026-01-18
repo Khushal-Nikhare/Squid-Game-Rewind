@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Hero-style Title */
+.hero-style {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #e5e5e5;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.25),
+    0 0 14px rgba(255, 0, 0, 0.45);
+}
+
+.hero-style span {
+  color: #ff0000;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 22px rgba(255, 0, 0, 0.6);
+}
+
+/* Intro */
+.faq-intro {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #dddddd;
+}
+
+/* FAQ Blocks */
+.faq-block {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.faq-question {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ff4d4d;
+}
+
+.faq-list {
+  list-style: none;
+}
+
+.faq-list li {
+  font-size: 17px;
+  color: #dddddd;
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.faq-list li strong {
+  color: #ffffff;
+}
+
+/* Stats (same as About page) */
+.event-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0 70px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  width: 200px;
+  padding: 25px 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 14px;
+  background: rgba(255, 0, 0, 0.06);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+}
+
+.stat-box h3 {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ff0000;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-style {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+
+  .faq-question {
+    font-size: 20px;
+  }
+
+  .stat-box {
+    width: 160px;
+  }
+
+  .stat-box h3 {
+    font-size: 36px;
+  }
+}
