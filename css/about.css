@@ -3,7 +3,7 @@
 /* About Section */
 .about-squid-game {
   background: radial-gradient(circle at top, #1a0000, #000000 70%);
-  padding: 100px 20px;
+  padding: 100px 20px 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;

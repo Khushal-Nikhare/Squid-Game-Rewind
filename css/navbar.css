@@ -26,7 +26,7 @@ html {
 
 body {
     font-family: 'Orbitron', sans-serif;
-    background-image: url('image/bg/image.png');
+    background-image: url('../image/image.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -37,6 +37,8 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
+    border-left: 5px solid var(--squid-red);
+    border-right: 5px solid var(--squid-blue);
 }
 
 body::before {
@@ -55,6 +57,7 @@ body::before {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
@@ -87,14 +90,14 @@ body::before {
 .nav-logo {
     height: 40px;
     width: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 0 8px rgba(220, 20, 60, 0.3));
+    /* transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 8px rgba(220, 20, 60, 0.3)); */
 }
 
-.nav-logo:hover {
+/* .nav-logo:hover {
     transform: scale(1.05);
     filter: drop-shadow(0 0 12px rgba(220, 20, 60, 0.6));
-}
+} */
 
 .logo-placeholder {
     background: linear-gradient(135deg, var(--primary-red), var(--dark-red));

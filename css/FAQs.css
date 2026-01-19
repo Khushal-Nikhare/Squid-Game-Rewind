@@ -2,7 +2,7 @@
 
 /* FAQ Section */
 .faq-section {
-  padding: 100px 20px;
+  padding: 100px 20px 0px 20px;
   display: flex;
   justify-content: center;
 }

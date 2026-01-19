@@ -34,20 +34,20 @@ html {
     position: relative;
     background: rgba(0, 0, 0, 0.55);
     /* Side glowing borders */
-    border-left: 5px solid var(--squid-red);
-    border-right: 5px solid var(--squid-blue);
+    border-left: 1px solid var(--squid-red);
+    border-right: 1px solid var(--squid-blue);
 }
 
-.hero::before {
+/* .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('../image/bg/image.png') center/cover no-repeat;
+    background: url('../image/image.png') center top 20px / cover no-repeat;
     filter: blur(3.5px);
     transform: scale(1.05);
     opacity: 0.75;
     z-index: 0;
-}
+} */
 
 
 /* Headings */
