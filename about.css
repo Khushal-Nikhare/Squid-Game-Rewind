@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* About Section */
+.about-squid-game {
+  background: radial-gradient(circle at top, #1a0000, #000000 70%);
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 46px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 40px; /* GAP between heading & paragraph */
+  letter-spacing: 1.5px;
+  text-align: center;
+
+  /* Glow effect like image */
+  text-shadow:
+    0 0 8px rgba(255, 0, 0, 0.4),
+    0 0 16px rgba(255, 0, 0, 0.3),
+    0 0 24px rgba(255, 0, 0, 0.2);
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #dddddd;
+  margin-bottom: 22px;
+}
+
+.about-text strong {
+  color: #ff3b3b;
+}
+
+
+
+/* Hero-like Heading Style for About Section */
+.hero-style {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  color: #e5e5e5;
+
+  /* Soft white + red glow */
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.25),
+    0 0 12px rgba(255, 0, 0, 0.45),
+    0 0 22px rgba(255, 0, 0, 0.35);
+}
+
+/* Highlight REWIND like hero */
+.hero-style span {
+  color: #ff0000;
+  text-shadow:
+    0 0 8px rgba(255, 0, 0, 0.8),
+    0 0 18px rgba(255, 0, 0, 0.6),
+    0 0 28px rgba(255, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-style {
+    font-size: 34px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Event Stats */
+.event-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  width: 200px;
+  padding: 25px 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 14px;
+  background: rgba(255, 0, 0, 0.06);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+}
+
+.stat-box h3 {
+  font-size: 44px;
+  font-weight: 900;
+  color: #ff0000;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(255, 0, 0, 0.8),
+    0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Elimination Note */
+.stat-note {
+  max-width: 700px;
+  margin: 35px auto 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cccccc;
+  letter-spacing: 0.5px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-stats {
+    gap: 25px;
+  }
+
+  .stat-box {
+    width: 160px;
+  }
+
+  .stat-box h3 {
+    font-size: 36px;
+  }
+
+  .stat-note {
+    font-size: 16px;
+  }
+}
+
