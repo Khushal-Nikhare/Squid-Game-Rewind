@@ -142,6 +142,10 @@ html {
     letter-spacing: 2px;
     box-shadow: 0 0 15px var(--squid-red);
     text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .register-btn:hover {
@@ -252,7 +256,23 @@ html {
         padding: 10px 15px;
     }
 
+    .register-btn {
+        width: 100%;
+        max-width: 360px;
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+    }
+
     .hero {
         border-width: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-btn {
+        max-width: 100%;
+        padding: 12px 16px;
+        font-size: 1rem;
     }
 }
