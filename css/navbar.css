@@ -14,6 +14,10 @@
     --white: #ffffff;
     --text-gray: #cccccc;
     --glow-red: rgba(220, 20, 60, 0.6);
+    --squid-red: #ff0000;
+    --squid-blue: #00d2ff;
+    --deep-black: #050505;
+    --glass-bg: rgba(255, 255, 255, 0.03);
 }
 
 html {
@@ -187,7 +191,7 @@ body::before {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 60px;
         right: -100%;
         width: 70%;
         height: calc(100vh - 70px);
@@ -223,11 +227,11 @@ body::before {
 @media (max-width: 480px) {
     .nav-logos {
         flex-wrap: wrap;
-        gap: 0.4rem;
+        gap: 0.8rem;
     }
 
     .nav-logo {
-        height: 25px;
+        height: 27px;
     }
 
     .logo-placeholder {

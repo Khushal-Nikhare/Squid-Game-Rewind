@@ -1,21 +1,27 @@
-:root {
-    --squid-red: #ff0000;
-    --squid-blue: #00d2ff;
-    --deep-black: #050505;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--deep-black);
-    font-family: 'Orbitron', sans-serif;
-    overflow-x: hidden;
-    color: white;
+:root {
+    --primary-red: #dc143c;
+    --dark-red: #8b0000;
+    --black: #0a0a0a;
+    --darker-black: #000000;
+    --gray: #1a1a1a;
+    --light-gray: #2a2a2a;
+    --white: #ffffff;
+    --text-gray: #cccccc;
+    --glow-red: rgba(220, 20, 60, 0.6);
+    --squid-red: #ff0000;
+    --squid-blue: #00d2ff;
+    --deep-black: #050505;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .hero {
@@ -250,4 +256,3 @@ body {
         border-width: 3px;
     }
 }
-
